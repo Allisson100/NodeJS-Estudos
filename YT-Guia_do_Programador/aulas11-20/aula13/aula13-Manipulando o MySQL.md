@@ -21,3 +21,4 @@ Sempre que quisermos especificar uma conculta com MySQL, devemos utilizar a pala
     select * from usuarios where idade = 8;
 
 
+
