@@ -29,3 +29,8 @@ Para criar tabelas utilizamos, por exemplo:
         email varchar(100),
         idade int
     );
+
+E para ver a estrutura dessa tabela utilizamos:
+
+    describe nome_da_tabela;
+
