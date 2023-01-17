@@ -20,11 +20,11 @@ ficando no nosso caso:
         dialect: 'mysql'
     })
 
-Para fazermos um teste vmos utilizar o código:
+Para fazermos um teste vamos utilizar o código:
 
     sequelize.authenticate();
 
-Ela verifica se a gente conseguiu se conectar com sucesso ao banco de dados, mas sozinha ele não faz nada.
+Ele verifica se a gente conseguiu se conectar com sucesso ao banco de dados, mas sozinha ele não faz nada.
 
     sequelize.authenticate().then(function () {
         console.log("Conectado com sucesso!")
@@ -32,7 +32,7 @@ Ela verifica se a gente conseguiu se conectar com sucesso ao banco de dados, mas
         console.log("Falha ao se concetar: " + erro);
     })
 
-O .then() fuinciona como uma função de callback, ela é uma função especial que é executada quando um evento acontece, ou seja, a função sequelize.authenticate() quando ela tenta se conectar ao banco dedados ela só terá dois resultados, secesso ou falha, caso a gente consiga se conectar com o banco de dados com sucesso a função .then() vai ser chamada caso tenha alguma falha ou qualquer erro a função que vai ser chamada será a .catch().
+O .then() funciona como uma função de callback, ela é uma função especial que é executada quando um evento acontece, ou seja, a função sequelize.authenticate() quando ela tenta se conectar ao banco dedados ela só terá dois resultados, secesso ou falha, caso a gente consiga se conectar com o banco de dados com sucesso a função .then() vai ser chamada caso tenha alguma falha ou qualquer erro a função que vai ser chamada será a .catch().
 
 O .then() e o .catch() vai ser bastante utilizado durante o curso e eles fazem parte de um paradigma chamado programação assíncrona.
 
