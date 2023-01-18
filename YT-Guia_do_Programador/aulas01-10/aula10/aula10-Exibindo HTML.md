@@ -10,7 +10,7 @@ Agora devemos colocar o arquivo HTML na função, mas para não termos problema 
 
     __dirname vai retonar => C:\Users\Francisco\Desktop\Github\NodeJS-Estudos\YT-Guia_do_Programador\aulas01-10\aula10
 
-E após isso adicone o o nomde do arquivo ficando como código final:
+E após isso adicone o o nome do arquivo ficando como código final:
 
     app.get("/", function(req, res) {
         res.sendFile(__dirname + "/index.html");

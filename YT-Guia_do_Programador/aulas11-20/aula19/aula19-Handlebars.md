@@ -14,7 +14,7 @@ Precisamos agora configurar ele, pois existem diversos templates engines por ai.
 
     //Config
     //Template Engine
-        app.engine('handlebars', handlebars({defaultLayout: 'main'}))
+        app.engine('handlebars', handlebars.engine({defaultLayout: 'main'}))
         app.set('view engine', 'handlebars')
 
 Basicamente essas duas linhas decódigo servem para falar para o express que queremos usar o handlebars como template engine.
