@@ -39,3 +39,4 @@ Quando trabalhamos com o method='POST', temos que alterar o tipo da rota, ficand
         res.send('FORMULÁRIO RECEBIDO!!')
     })
 
+ 
