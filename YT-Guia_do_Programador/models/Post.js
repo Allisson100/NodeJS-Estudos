@@ -4,7 +4,7 @@ const Post = db.sequelize.define('postagens', {
     titulo: {
         type: db.Sequelize.STRING
     },
-    coteudo: {
+    conteudo: {
         type: db.Sequelize.TEXT
     }
 })
