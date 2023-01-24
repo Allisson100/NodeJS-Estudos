@@ -46,7 +46,7 @@ Precisamos também ter alguma mensagem para saber se a conexão com banco foi fe
         console.log("Houve um erro ao se conectar com o MongoDB: " + erro);
     })
 
-Para evitar alguns erros noMOngo podemos usar umas configurações adicionais:
+Para evitar alguns erros no Mongo podemos usar umas configurações adicionais:
 
 // Configurando o mongoose
     mongoose.Promise = global.Promise;
