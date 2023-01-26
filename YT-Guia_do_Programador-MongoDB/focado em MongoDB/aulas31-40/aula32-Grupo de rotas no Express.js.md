@@ -28,6 +28,7 @@ Para resolver isso basta criar uma constante requisitando o a página admin.js e
 O código completo até agora ficou:
 
 app.js:
+
     //Carregando módulos
         const express = require('express');
         const handlebars = require('express-handlebars');
@@ -56,6 +57,7 @@ app.js:
 
 
 admin.js:
+
     const express = require('express');
     const router = express.Router();
 
