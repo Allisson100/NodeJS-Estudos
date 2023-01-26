@@ -2,7 +2,7 @@
 
 Para inserir dados na tabela utilizamos o comando:
 
-    insert into nome_da_tabela (aqui voc~e insere os campo que você que inserir dados) values (aqui você defini o valor para cada campo);
+    insert into nome_da_tabela (aqui você insere os campo que você quer inserir dados) values (aqui você define o valor para cada campo);
 
 ficando:
 
@@ -16,7 +16,7 @@ Para você ver todos os dados da tabela utilizamos:
 
     select * from nome_da_tabela;
 
-Sempre que quisermos especificar uma conculta com MySQL, devemos utilizar a palavra chave where, exemplo:
+Sempre que quisermos especificar uma consulta com MySQL, devemos utilizar a palavra chave where, exemplo:
 
     select * from usuarios where idade = 8;
 

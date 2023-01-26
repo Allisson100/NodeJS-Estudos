@@ -8,9 +8,9 @@ Acessamos o banco com:
 
     use postapp;
 
-Vamos criar uma pasta models e criar o arquivo db.js. Esse arquivo serve para separar um pouco o código e ele ficará responsável por se connectar com o banco de dados.
+Vamos criar uma pasta models e criar o arquivo db.js. Esse arquivo serve para separar um pouco o código e ele ficará responsável por se conectar com o banco de dados.
 
-Para exportar esse arquivo para outros devemos utiliza o module.exports, ficando:
+Para exportar esse arquivo para outros devemos utilizar o module.exports, ficando:
 
     const Sequelize = require('sequelize');
 

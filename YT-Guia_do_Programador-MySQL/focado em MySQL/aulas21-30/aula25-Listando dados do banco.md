@@ -1,10 +1,10 @@
 # Listando dados do banco
 
-Agora vamos pegar os dados do banco e mostrar no arquivo home.handlenars, para isso devemos digitar na rota '/':
+Agora vamos pegar os dados do banco e mostrar no arquivo home.handlebars, para isso devemos digitar na rota '/':
 
     Post.findAll()
 
-E devemos passar esses posts para a pasta views com o .then() e dentro o .then() devemos colocar o res.render('home'), ficando da seguinte forma:
+E devemos passar esses posts para a pasta views com o .then() e dentro do .then() devemos colocar o res.render('home'), ficando da seguinte forma:
 
     app.get('/', function(req, res){
         Post.findAll().then(function(posts){
@@ -22,7 +22,7 @@ E se eu quiser que essas variavéis apareçam lá na home.handlebars eu devo dig
     {{nome}}
     {{sobrenome}}
 
-Então agora devemos passar a variável posts para que os dados do bnco fique na página home.handlebars:
+Então agora devemos passar a variável posts para que os dados do banco fique na página home.handlebars:
 
        app.get('/', function(req, res){
         Post.findAll().then(function(posts){
@@ -46,7 +46,7 @@ Porém assim ele ainda não mostra os dados, mas é legal ver o que ele retorna.
         <hr>
     {{/each}}
 
-Mas com o código acima não aprecerá os dados do banco, pois devemos acrescentar uma coisa no arquivo db.js:
+Mas com o código acima não aparecerá os dados do banco, pois devemos acrescentar uma coisa no arquivo db.js:
 
     const Sequelize = require('sequelize');
 
@@ -64,7 +64,7 @@ Mas com o código acima não aprecerá os dados do banco, pois devemos acrescent
 
 Agora tudo está correto para que funcione.
 
-A tag {{#each}} {{/each}} siginifica "cada", então lá no código do handlebars quereos dizer que para cada postagem, exiba o título no h1 e conteudo na tag p e também o hr.
+A tag {{#each}} {{/each}} siginifica "cada", então lá no código do handlebars queremos dizer que para cada postagem, exiba o título no h1 e conteudo na tag p e também o hr.
 Usamos isso, pois o que recebemos do Post.findAll é um array com vários posts, então essa é uma maneira de seleciona-lo.
 
 =========================================

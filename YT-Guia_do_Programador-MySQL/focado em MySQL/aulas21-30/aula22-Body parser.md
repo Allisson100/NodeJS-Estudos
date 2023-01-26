@@ -26,9 +26,8 @@ Ele está requisitando o campo com o name="titulo" e o campo com o name="conteud
 
 *LEMBRANDO QUE O BODY PARSE MUDOU ENTÃO TIVE QUE FAZER ALGUMAS MUDANÇAS PARA O CÓDIGO FUNCIONAR*
 
-============================
-Código Final fo vídeo
-============================
+==================================
+Código Final do vídeo
 
     const express = require("express");
     const app = express();
@@ -61,6 +60,8 @@ Código Final fo vídeo
     app.listen(8081, function () {
         console.log("Servidor esta rodando na url http://localhost:8081");
     })
+
+
 
 
 

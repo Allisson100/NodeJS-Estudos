@@ -1,8 +1,8 @@
 # Como se conectar ao MySQL
 
-O sequelize é um orm, um orm é um sistema que abstrai toda a camada de banco de dados, então não precisa mais ficar digitando as querrys longas dos selects, etc.
+O sequelize é um ORM, um ORm é um sistema que abstrai toda a camada de banco de dados, então não precisa mais ficar digitando as querrys longas dos selects, etc.
 
-Para se conectar precisanmos digitar o seguinte código:
+Para se conectar precisamos digitar o seguinte código:
 
     const Sequelize = require('sequelize');
     const sequelize = new Sequelize('');
@@ -24,15 +24,15 @@ Para fazermos um teste vamos utilizar o código:
 
     sequelize.authenticate();
 
-Ele verifica se a gente conseguiu se conectar com sucesso ao banco de dados, mas sozinha ele não faz nada.
+Ele verifica se a gente conseguiu se conectar com sucesso ao banco de dados, mas sozinho ele não faz nada.
 
     sequelize.authenticate().then(function () {
         console.log("Conectado com sucesso!")
     }).catch(function (erro) {
-        console.log("Falha ao se concetar: " + erro);
+        console.log("Falha ao se conectar: " + erro);
     })
 
-O .then() funciona como uma função de callback, ela é uma função especial que é executada quando um evento acontece, ou seja, a função sequelize.authenticate() quando ela tenta se conectar ao banco dedados ela só terá dois resultados, secesso ou falha, caso a gente consiga se conectar com o banco de dados com sucesso a função .then() vai ser chamada caso tenha alguma falha ou qualquer erro a função que vai ser chamada será a .catch().
+O .then() funciona como uma função de callback, ela é uma função especial que é executada quando um evento acontece, ou seja, a função sequelize.authenticate() quando ela tenta se conectar ao banco de dados ela só terá dois resultados, secesso ou falha, caso a gente consiga se conectar com o banco de dados com sucesso a função .then() vai ser chamada caso tenha alguma falha ou qualquer erro a função que vai ser chamada será a .catch().
 
-O .then() e o .catch() vai ser bastante utilizado durante o curso e eles fazem parte de um paradigma chamado programação assíncrona.
+O .then() e o .catch() vão ser bastante utilizado durante o curso e eles fazem parte de um paradigma chamado programação assíncrona.
 

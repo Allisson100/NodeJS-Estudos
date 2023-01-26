@@ -26,7 +26,7 @@ Vale ressaltar que você só pode envir o send uma vez, exemplo:
 
 O código acima irá retornar um erro lá no terminal porque eu estou utilizando varios send.
 
-Para resolver isso é só concatenat todos os send em um só:
+Para resolver isso é só concatenar todos os send em um só:
 
     app.get("/ola/:cargo/:nome/:cor", function (req, res) {
         res.send("Olá " + req.params.nome + "</br>Seu cargo e: " + req.params.cargo + "</br>Sua cor favorita e: " + req.params.cor);

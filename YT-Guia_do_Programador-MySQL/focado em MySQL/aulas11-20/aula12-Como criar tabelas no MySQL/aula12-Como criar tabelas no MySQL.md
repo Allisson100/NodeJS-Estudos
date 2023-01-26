@@ -2,11 +2,11 @@ Como acessar o MySQL no terminal:
 
     mysql -h localhost -u root -p
 
--h significa em qaul servidor você quer se conectar que no nosso caso é o servidor loca onde instalei o mysql.
+-h significa em qual servidor você quer se conectar que no nosso caso é o servidor local onde instalei o mysql.
 -u significa qual o usuário que no nosso caso é o root.
 -p é pra colocar a senha que eu defini lá na hora que estava instalando o mysql
 
-Mostrar banco de dados que existe no MySQL:
+Mostrar banco de dados que existem no MySQL:
 
     show databases;
 

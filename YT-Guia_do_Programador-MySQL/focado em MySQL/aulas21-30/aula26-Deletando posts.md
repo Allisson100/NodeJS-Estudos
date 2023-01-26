@@ -17,7 +17,7 @@ Já adicionamos o botão, agora devemos criar uma rota para que aconteça o dele
         Post.destroy({where:  {'id': req.params.id}})
     })
 
-Nessa rota estamos dizendo que queremos deletar um dado do banco de dados e para isso utilizamos o comando Pos.destroy(). Devemos passar para ele alguns parametros, pois como ele vai saber qual post queremos deletar. Então por isso dizemos que queremos destruir o post where o id vai ser igual ao id que estamos requisitando com o 'id': req.params.id.
+Nessa rota estamos dizendo que queremos deletar um dado do banco de dados e para isso utilizamos o comando Post.destroy(). Devemos passar para ele alguns parametros, pois como ele vai saber qual post queremos deletar. Então por isso dizemos que queremos destruir o post where o id vai ser igual ao id que estamos requisitando com o 'id': req.params.id.
 
 Caso aconteça algum erro eu quero que o código me avise também.
 

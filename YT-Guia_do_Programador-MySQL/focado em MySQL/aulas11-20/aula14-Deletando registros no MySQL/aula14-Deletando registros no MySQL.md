@@ -1,6 +1,6 @@
 # Deletando registros no MySQL
 
-Para deletar algum dado da tabela sql digitiamos no cmd:
+Para deletar algum dado da tabela sql digitamos no cmd:
 
     delete from nome_da_tabela;
 

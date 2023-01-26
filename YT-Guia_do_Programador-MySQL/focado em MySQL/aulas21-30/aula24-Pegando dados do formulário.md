@@ -1,6 +1,6 @@
 # Pegando dados do formulário
 
-Agora no arquivo index.html devemos criar a constante para receber o Post.js, pois vamos maniupula-lo atraves do index.js.
+Agora no arquivo index.html devemos criar a constante para receber o Post.js, pois vamos manipula-lo atraves do index.js.
 
     const Post = require('./models/Post');
 

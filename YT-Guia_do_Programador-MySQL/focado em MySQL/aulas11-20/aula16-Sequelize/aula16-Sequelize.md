@@ -1,6 +1,6 @@
 # Sequelize
 
-Esse módulo ajuda a trabalhr com banco de dados diretamente do Node JS.
+Esse módulo ajuda a trabalhar com banco de dados diretamente do Node JS.
 
 Par instalar ele devemos digitar no cmd:
 
