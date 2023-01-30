@@ -27,7 +27,7 @@ Temos também que adicionar um botão no arquivo categorias.handlebars com uma t
 
 E vamos criar também uma nova view na pasta admin para essa parte de edição de categorias.
 
-No arquivo editcategorias.handlebars precisamos que os dados que vamos editar fique escrito no campo do formulário e para isso devemos cahmar na rota de edição o model Categoria.findOne({_id:req.params.id}):
+No arquivo editcategorias.handlebars precisamos que os dados que vamos editar fique escrito no campo do formulário e para isso devemos chamar na rota de edição o model Categoria.findOne({_id:req.params.id}):
 
     router.get("/categorias/edit/:id", (req, res) => {
         Categoria.findOne({_id:req.params.id}).lean().then((categoria) => {
