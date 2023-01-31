@@ -2,7 +2,7 @@
 
 MongoDb é um banco de dados de código aberto, gratuito, de alta performace, sem esquemas e orientado à documentos.
 
-No MySQL utilizamos o esquema de tabelas. Já no MongoDB não existe tabelas, cada dados é salvo como um documento e é salvo na seguinte estrutura, exemplo:
+No MySQL utilizamos o esquema de tabelas. Já no MongoDB não existe tabelas, cada dado é salvo como um documento e é salvo na seguinte estrutura, exemplo:
 
     {
         name: "al",
