@@ -10,7 +10,7 @@ Primeiro vamos criar uma rota do tipo get:
 
 E vamos criar esse arquivo editpostagens.handlebars na pasta views/admin.
 
-O formulário do arquivo editpostagens é o mesmo do addpostagens, mudando somente o titulo e nome do botão:
+O formulário do arquivo editpostagens é o mesmo do addpostagens, mudando somente o título e nome do botão:
 
     {{#each erros}}
         <div class="alert alert-danger">{{texto}}</div>
@@ -53,7 +53,7 @@ Lembrando que foi acrescentado o botão editar postagem no arquivo postagens.han
 
 Agora para mostar o conteúdo cadastrado no arquivo editpostagens.handlebars devemos fazer duas pesquisas seguidas no banco de dados do Mongo, primeiro pesquisar as postagens e depois as categorias.
 
-Para fazer essas pesquisas em sequencia devemos mexer na rota:
+Para fazer essas pesquisas em sequência devemos mexer na rota:
 
     router.get("/postagens/edit/:id", (req, res) => {
 
@@ -72,7 +72,7 @@ Para fazer essas pesquisas em sequencia devemos mexer na rota:
         })
     })
 
-Também devemos adicionar essas dados no arquivo editpostagens.handlebars:
+Também devemos adicionar esses dados no arquivo editpostagens.handlebars:
 
     {{#each erros}}
         <div class="alert alert-danger">{{texto}}</div>
@@ -111,10 +111,10 @@ Também devemos adicionar essas dados no arquivo editpostagens.handlebars:
         </div>
     </div>
 
-Lembrando que a tag textarea não existe o value, então coloacamos o conteudo dentro do campos mesmo (>{{postagem.conteudo}}<).
+Lembrando que a tag textarea não existe o value, então colocamos o conteúdo dentro do campo mesmo (>{{postagem.conteudo}}<).
 
 
-Agora precisamos criar uma rota que vai atualizar lá no banco de dados o conteud da postagem:
+Agora precisamos criar uma rota que vai atualizar lá no banco de dados o conteúdo da postagem:
 
 Antes de criar a rota devemos criar um input dentro do form do tipo hidden no arquivo editpostagens.handlebars:
 

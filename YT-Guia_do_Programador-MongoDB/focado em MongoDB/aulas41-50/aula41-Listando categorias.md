@@ -1,6 +1,6 @@
 # Listando categorias
 
-Agora precisamos mostar a lista de categorias na rota categorias. Primeiro temos que indentificar a rota de categorias e digitar:
+Agora precisamos mostrar a lista de categorias na rota categorias. Primeiro temos que identificar a rota de categorias e digitar:
 
     router.get('/categorias', (req, res) => {
         Categoria.find().lean().then((categorias) => {
@@ -31,7 +31,7 @@ Não podemos esquecer também de passar os valores para a página de categorias 
 
 ===================================
 
-E se quisermos ordenar as categorias do mias recente para o mais antigo que nem fizemos no MySQL basta ir na rota de categorias e chamar a função .sort({date: 'desc'}):
+E se quisermos ordenar as categorias do mais recente para o mais antigo que nem fizemos no MySQL basta ir na rota de categorias e chamar a função .sort({date: 'desc'}):
 
     router.get('/categorias', (req, res) => {
         Categoria.find().lean().sort({date: 'desc'}).then((categorias) => {

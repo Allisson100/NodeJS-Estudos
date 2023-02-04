@@ -6,7 +6,7 @@ Vamos criar uma nova rota post:
         
     })
 
-Após criar  arota precisamos ir no formulário addpostagem.handlebars e dizer na action que essa rota que criamos é a rota para enviar o formulário e também dizer o método.
+Após criar a rota precisamos ir no formulário addpostagem.handlebars e dizer na action que essa rota que criamos é a rota para enviar o formulário e também dizer o método.
 
     <div class="card">
         <div class="card-body">
@@ -57,9 +57,9 @@ Agora precisamos mexer na rota que criamos. Podemos fazer a validação, mas nes
 
     })
 
-Por enquanto fizemos uma validação na parte de categorias, onde crimos um array vazio e criamos um que, caso o req.body.categoria nos retorne 0, o que siginifica que n tem categoria registrada, ele vai adciocinar um objeto no array com o texto dizendo que é inválido. O segundo if serve para dizer que caso o array for maior que zero, ele irá redenizar a página de categorias porém com a messagem do erro. 
+Por enquanto fizemos uma validação na parte de categorias, onde craimos um array vazio e criamos um para caso o req.body.categoria nos retorne 0, o que siginifica que não tem categoria registrada, ele vai adicionar um objeto no array com o texto dizendo que é inválido. O segundo if serve para dizer que caso o array for maior que zero, ele irá redenizar a página de categorias porém com a messagem do erro. 
 
-Lembrando que não podemos esquecer de adcionar esse erro lá na página addpostagem.handlebars:
+Lembrando que não podemos esquecer de adicionar esse erro lá na página addpostagem.handlebars:
 
     {{#each erros}}
         <div class="alert alert-danger">{{texto}}</div>
@@ -98,7 +98,7 @@ Lembrando que não podemos esquecer de adcionar esse erro lá na página addpost
         </div>
     </div>
 
-Agora lá no else vamos adicionar a postagem no banco de dados. precismos primeiro carregar na página o model de post, pois até o moomento só tinhamos carregados o model de Categorias. Então para isso criamos uma constante:
+Agora lá no else vamos adicionar a postagem no banco de dados. Precisamos primeiro carregar na página o model de post, pois até o moomento só tinhamos carregado o model de Categorias. Então para isso criamos uma constante:
 
     require('../models/Postagem');
     const Postagem = mongoose.model("postagens");

@@ -1,6 +1,6 @@
 # Criando home page
 
-Criamos até o momento toda a parte do admin, agora vamos criar a prte do cliente.
+Criamos até o momento toda a parte do admin, agora vamos criar a parte do cliente.
 
 Vamos no arquivo app.js e criar a rota:
 
@@ -8,7 +8,7 @@ Vamos no arquivo app.js e criar a rota:
         res.render("index")
     })
 
-E na pasta views vamos criar um arquivo chamdo index.handlebars.
+E na pasta views vamos criar um arquivo chamado index.handlebars.
 
 E vamos personalizar também a _navbar.handlebars.
 

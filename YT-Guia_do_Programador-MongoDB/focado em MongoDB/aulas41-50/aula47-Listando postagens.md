@@ -2,7 +2,7 @@
 
 Funcionalidade populate.
 
-Se quisermos pegar o nome da categoria por exemplo, deveriamos fazer um busca atraves do seu id.
+Se quisermos pegar o nome da categoria por exemplo, deveriamos fazer um busca através do seu id.
 
 Exemplo, vamos mexer na rota postagem:
 

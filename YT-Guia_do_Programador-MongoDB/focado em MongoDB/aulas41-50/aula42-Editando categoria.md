@@ -6,7 +6,7 @@ Para apagar as categorias precisamos criar uma nova rota:
         res.render("admin/editcategorias");
     })
 
-Temos também que adicionar um botão no arquivo categorias.handlebars com uma tag a :
+Temos também que adicionar um botão no arquivo categorias.handlebars com uma tag a:
 
     <h2>Lista de categorias: </h2>
     <hr>
@@ -47,7 +47,7 @@ No arquivo editcategorias.handlebars precisamos adicionar um outro input do tipo
 
 Ele simplesmente está pegando o id daquela categoria para ser utilizada no backend.
 
-Agora que já temos id vamos criar outra rota:
+Agora que já temos o id vamos criar outra rota:
 
     router.post("/categorias/edit", (req, res) => {
 

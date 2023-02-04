@@ -35,9 +35,9 @@ Vamos criar um novo model na pasta models com o nome Postagem.js e vamos definir
 
     mongoose.model('postagens', Postagem);
 
-A melhor forma de fazer um relacionamento entre 'tabelas'(Postagem e Categroias), é dizer que o type da categoria da postagem é Schema.Types.ObjectID, ou seja, ele vai armazenar o id de um objeto. Também tem que passar uma referencia e vamos passar o valor de categorias, pois é o nome que eu dei para o model de Categoria.
+A melhor forma de fazer um relacionamento entre 'tabelas'(Postagem e Categroias), é dizer que o type da categoria da postagem é Schema.Types.ObjectID, ou seja, ele vai armazenar o id de um objeto. Também tem que passar uma referência e vamos passar o valor de categorias, pois é o nome que eu dei para o model de Categoria.
 
-Lembrando que após a criaçõ do model devemos chaamr o mongoose.model e dizem qual é o nome da collection que vai ser criada no banco de dados e qual vai ser a bse que no nosso caso é 'postagens', Postagem.
+Lembrando que após a criação do model devemos chamar o mongoose.model e dizer qual é o nome da collection que vai ser criada no banco de dados e qual vai ser a base que no nosso caso é 'postagens', Postagem.
 
 
 

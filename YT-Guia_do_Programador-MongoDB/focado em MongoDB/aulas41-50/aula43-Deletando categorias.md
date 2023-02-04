@@ -1,6 +1,6 @@
 # Deletando categorias
 
-Para deletarmos as categorias primeiro vamos criar um formulário novo no arquivo categorias.handlebars e acrescentar um botão é inout do tipo hidden:
+Para deletarmos as categorias primeiro vamos criar um formulário novo no arquivo categorias.handlebars e acrescentar um botão e input do tipo hidden:
 
     <h2>Lista de categorias: </h2>
     <hr>
@@ -23,7 +23,7 @@ Para deletarmos as categorias primeiro vamos criar um formulário novo no arquiv
 
     {{/each}}
 
-E vamos criar um nov rota:
+E vamos criar uma nova rota:
 
     router.post("/categorias/deletar", (req, res) => {
         Categoria.remove({_id: req.body.id}).then(() => {
