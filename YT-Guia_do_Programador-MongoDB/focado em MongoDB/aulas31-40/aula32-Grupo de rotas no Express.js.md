@@ -1,12 +1,12 @@
 # Grupo de rotas no Express.js
 
-Se manter várias rotas em um arquivo que já tem outros códigos não é bom, pois é dificil dar manutenção e não é uma boa prática, então devemos criar uma pasta somente para as rotas.
+Manter várias rotas em um arquivo que já tem outros códigos não é bom, pois é difícil dar manutenção e não é uma boa prática, então devemos criar uma pasta somente para as rotas.
 
     const router = express.Router();
 
 Nós usamos aquela constante para crair rotas em arquivos separados.
 
-E precisamos exporta-lo no final do arquivo:
+E precisamos exportá-lo no final do arquivo:
 
 
     const express = require('express');
@@ -18,7 +18,7 @@ E precisamos exporta-lo no final do arquivo:
 
 Se abrirmos o app.js com nodemon e tentarmos acessar alguma rota ele vai dar um erro, pois não falamos pro app.js que existe rotas no arquivo admin.js.
 
-Para resolver isso basta criar uma constante requisitando o a página admin.js e la na configurações de rotas pede para usar um prefixo '/admin' para dizer que aquelas rotas pertencem ao ADM:
+Para resolver isso basta criar uma constante requisitando a página admin.js e lá nas configurações de rotas pede para usar um prefixo '/admin' para dizer que aquelas rotas pertencem ao ADM:
 
     const admin = require('./routes/admin');
 

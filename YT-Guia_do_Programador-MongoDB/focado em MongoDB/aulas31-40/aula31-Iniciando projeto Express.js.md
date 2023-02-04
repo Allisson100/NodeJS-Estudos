@@ -6,7 +6,7 @@ Para instalar o express digite no terminal:
 
     npm install --save express
 
-Para instalar o handlebars digite no termainal:
+Para instalar o handlebars digite no terminal:
 
     npm install --save express-handlebars
 

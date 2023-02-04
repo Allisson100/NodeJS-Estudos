@@ -1,6 +1,6 @@
 # Formulário de categorias
 
-Criei novas rotas para a area de categorias:
+Criei novas rotas para a área de categorias:
 
     router.get('/categorias', (req, res) => {
         res.render("admin/categorias")
@@ -14,7 +14,7 @@ E também novos arquivos na pasta views/admin chamado addcategorias.handlebars e
 
 ====================================
 
-Na página categorias.handlebars criamos um html simples e criamos também um tag a levando o usuario para uma nova rota o clicar no botão:
+Na página categorias.handlebars criamos um html simples e criamos também uma tag *a* levando o usuário para uma nova rota ao clicar no botão:
 
     <h2>Lista de categorias: </h2>
     <hr>
@@ -22,7 +22,7 @@ Na página categorias.handlebars criamos um html simples e criamos também um ta
 
 ====================================
 
-Dentro do arquivo asscategorias.handlebars vamos criar o formulário:
+Dentro do arquivo addcategorias.handlebars vamos criar o formulário:
 
     <h3>Nova Categoria:</h3>
     <div class="card">

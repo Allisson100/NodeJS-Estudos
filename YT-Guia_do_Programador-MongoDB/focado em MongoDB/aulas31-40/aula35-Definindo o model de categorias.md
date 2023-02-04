@@ -2,11 +2,11 @@
 
 Vamos criar um model de categoria, mas precisamos antes configurar a conexão com o MongoDb.
 
-Precismos primeiro criar uma const requistando o mongoose:
+Precisamos primeiro criar uma const requisitando o mongoose:
 
     const mongoose = require('mongoose');
 
-E depois comfigura-lo:
+E depois comfigurá-lo:
 
     // Mongoose
         mongoose.Promise = global.Promise;
@@ -22,7 +22,7 @@ Agora vamos criar o model de categorias.
 
 Primeiramente vamos criar um arquivo Categoria.js na pasta models.
 
-Lembrando que criar um model com a primeira letra maiuscula e no singular é uma boa prática de organização de projeto.
+Lembrando que criar um model com a primeira letra maiúscula e no singular é uma boa prática de organização de projeto.
 
 ========================================
 

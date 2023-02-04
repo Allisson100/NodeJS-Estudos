@@ -36,7 +36,7 @@ Podemos fazer essa válidação de forma manual através de estruturas de if:
         })
     })
 
-E caso de algum erro para mostra-lo na págin html devemos adicionar a seguinte estrutura na página addcategorias.handlebars:
+E caso de algum erro para mostrá-lo na página html devemos adicionar a seguinte estrutura na página addcategorias.handlebars:
 
     {{#each erros}}
         <div class="alert alert-danger">{{texto}}</div>
@@ -46,7 +46,7 @@ E caso de algum erro para mostra-lo na págin html devemos adicionar a seguinte 
 
 =====================
 
-Para deixar melhor a parte de validação, vamos adiconar a parte que criar a categoria em um else, ficando da seguinte forma:
+Para deixar melhor a parte de validação, vamos adiconar a parte que cria a categoria em um else, ficando da seguinte forma:
 
     router.post('/categorias/nova', (req, res) => {
 
@@ -82,11 +82,11 @@ Para deixar melhor a parte de validação, vamos adiconar a parte que criar a ca
         }
     })
 
-Adicionamos também no codigo acima dois req.flash para exibir a mensagem se houver erro ou não ao registrar uma nova categoria. 
+Adicionamos também no código acima dois req.flash para exibir a mensagem se houver erro ou não ao registrar uma nova categoria. 
 
-E criamos também um novo arquivo na pasta partials chamado _msg.handlebars para justamente exibir essas mensagens. Também tiramos as pasrtes de console.log e colocamos um redirecionamento de páginas.
+E criamos também um novo arquivo na pasta partials chamado _msg.handlebars para justamente exibir essas mensagens. Também tiramos as partes de console.log e colocamos um redirecionamento de páginas.
 
-E também adiconamos o partial no página mian_handlebars:
+E também adicionamos o partial no página main_handlebars:
 
     <!DOCTYPE html>
     <html lang="pt-br">
@@ -111,7 +111,7 @@ E também adiconamos o partial no página mian_handlebars:
     <script src="/js/bootstrap.js"></script>
     </html>
 
-Lembrando que o flash é tipo de sessão que só aparece uma vez, quando a pessoa for recarregar a página já não vai estar mais lá.
+Lembrando que o flash é um tipo de sessão que só aparece uma vez, quando a pessoa for recarregar a página já não vai estar mais lá.
 
 
 

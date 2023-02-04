@@ -1,6 +1,6 @@
 # Cadastrando categorias no banco de dados
 
-Craimos uma nova rota chamada '/categorias/novas' e chamamos o magoose no arquivo admin.js, pois quereos registrar as novas categorias no banco de dados, além de criar alguns outros códigos:
+Criamos uma nova rota chamada '/categorias/novas' e chamamos o mangoose no arquivo admin.js, pois queremos registrar as novas categorias no banco de dados, além de criar alguns outros códigos:
 
     const mongoose = require('mongoose');
     require ('../models/Categoria');
