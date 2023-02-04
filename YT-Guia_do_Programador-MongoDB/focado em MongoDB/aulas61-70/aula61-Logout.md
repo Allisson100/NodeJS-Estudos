@@ -1,6 +1,6 @@
 # Logout
 
-Para fazer o logout do usuario vamos no arquivo usuario.js e criar uma nova rota:
+Para fazer o logout do usuário vamos no arquivo usuario.js e criar uma nova rota:
 
     router.get("/logout", (req, res) => {
 
