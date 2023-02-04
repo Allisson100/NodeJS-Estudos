@@ -13,6 +13,6 @@ No MySQL utilizamos o esquema de tabelas. Já no MongoDB não existe tabelas, ca
 
 Ou seja, o MongoDb utiliza a estrutura de objetos do JavaScript, o famoso JASON.
 
-Se pro exemplo eu quiser salvar uma estrutura de usuários, ele salva e organiza tudo em uma Collection.
+Se por exemplo eu quiser salvar uma estrutura de usuários, ele salva e organiza tudo em uma Collection.
 
-Uma Collection é o conjunto de documentos do mesmo tipo
+Uma Collection é o conjunto de documentos do mesmo tipo.

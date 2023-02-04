@@ -61,7 +61,7 @@ E no nosso caso fica:
 
 Com o código acima já é suficiente para criar um novo usuário.
 
-Para salvar o usuário devemos digitar .save() no final de new UsuarioSchema, e uytilizamos then e catch para saber se deu algum tipo de erro.
+Para salvar o usuário devemos digitar .save() no final de new UsuarioSchema, e utilizamos then e catch para saber se deu algum tipo de erro.
 
     new UsuarioSchema ({
         nome: "Allisson",
@@ -75,24 +75,24 @@ Para salvar o usuário devemos digitar .save() no final de new UsuarioSchema, e 
         console.log("Houve um erro ao registrar o usuário: " + erro);
     })
 
-O código acima irá retornar um erro, para arruma-lo devemos criar uma constante para referenciar o model, ficando da seguinte forma:
+O código acima irá retornar um erro, para arrumá-lo devemos criar uma constante para referenciar o model, ficando da seguinte forma:
 
-//Collection
-    mongoose.model('usuarios', UsuarioSchema);
+    //Collection
+        mongoose.model('usuarios', UsuarioSchema);
 
-    const Allisson = mongoose.model('usuarios')
+        const Allisson = mongoose.model('usuarios')
 
-    new Allisson ({
-        nome: "Allisson",
-        sobrenome: "Matheus",
-        email: "teste@email.com",
-        idade: 22,
-        pais: "Brasil"
-    }).save().then(() => {
-        console.log("Usuário criado com sucesso!!!");
-    }).catch((erro) => {
-        console.log("Houve um erro ao registrar o usuário: " + erro);
-    })
+        new Allisson ({
+            nome: "Allisson",
+            sobrenome: "Matheus",
+            email: "teste@email.com",
+            idade: 22,
+            pais: "Brasil"
+        }).save().then(() => {
+            console.log("Usuário criado com sucesso!!!");
+        }).catch((erro) => {
+            console.log("Houve um erro ao registrar o usuário: " + erro);
+        })
 
 ====================================
 

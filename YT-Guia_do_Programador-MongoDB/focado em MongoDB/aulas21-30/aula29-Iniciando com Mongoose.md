@@ -6,7 +6,7 @@ Para instalar o mangoose, entre na pasta principal do projeto e digite no cdm:
 
 ================================
 
-### Aprendendo a se concetar com o mongoose
+### Aprendendo a se conectar com o mongoose
 
 Primeiro criamos uma constante requisitando o mangoose:
 
@@ -18,7 +18,7 @@ E para se conectar a ele digitamos:
 
 Lembrando que nesse caso podemos colocar qualquer nome de banco, pois caso o nome do banco não existir ele vai criar um.
 
-ficando:
+Ficando:
 
     const mongoose = require('mongoose');
 
@@ -48,15 +48,15 @@ Precisamos também ter alguma mensagem para saber se a conexão com banco foi fe
 
 Para evitar alguns erros no Mongo podemos usar umas configurações adicionais:
 
-// Configurando o mongoose
-    mongoose.Promise = global.Promise;
-    mongoose.connect("mongodb://127.0.0.1/aprendendo", {
-        useMongoClient: true
-    }).then(() => {
-        console.log("MongoDB Conectado ...");
-    }).catch((erro) => {
-        console.log("Houve um erro ao se conectar com o MongoDB: " + erro);
-    })
+    // Configurando o mongoose
+        mongoose.Promise = global.Promise;
+        mongoose.connect("mongodb://127.0.0.1/aprendendo", {
+            useMongoClient: true
+        }).then(() => {
+            console.log("MongoDB Conectado ...");
+        }).catch((erro) => {
+            console.log("Houve um erro ao se conectar com o MongoDB: " + erro);
+        })
 
 Esse código que foi passado na aula é de uma versão antiga do mongoose, a versão 5.0 que estou utilizando não precisa mais dessa parte do useMongoClient: true, então é só remove-la que funciona normalmente:
 
