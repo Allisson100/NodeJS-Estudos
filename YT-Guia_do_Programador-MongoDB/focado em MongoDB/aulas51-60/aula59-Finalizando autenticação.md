@@ -1,6 +1,6 @@
 # Finalizando autenticação
 
-Vamos criar uma nova rota do tipo post no arquivo usuario.js. precisamos carregar o passaport nesse arquivo também.
+Vamos criar uma nova rota do tipo post no arquivo usuario.js. Precisamos carregar o passaport nesse arquivo também.
 
     const passport = require("passport");
 
@@ -77,21 +77,21 @@ Esquecemos de adicionar um campo no arquivo auth.js, então agora fica:
         })
     }
 
-Tivemos que adicionar o passwordField: 'senha', isso porque a configuração do passport só entende em inglês e como nossos camos estão em português tivemos que adiconar esse campo deizendo que o password é a senha. Provavelmente se a gente tivesse programado em inglês o site, osistema já reconheceria esse campo automaticamente sem precisar colocar o passwordFiel.
+Tivemos que adicionar o passwordField: 'senha', isso porque a configuração do passport só entende em inglês e como nossos campos estão em português tivemos que adiconar esse campo dizendo que o password é a senha. Provavelmente se a gente tivesse programado em inglês o site, o sistema já reconheceria esse campo automaticamente sem precisar colocar o passwordFiel.
 
 Vamos precisar agora adiconar uma outra variável global lá no middleware, pois a mensagem de erro não está funcioando quando o usuário tenta fazer login com o email ou senha incorreta.
 
 Então dentro do app.js digitamos:
 
- //Middleware
-        app.use((req, res, next) => {
-            res.locals.success_msg = req.flash("success_msg");
-            res.locals.error_msg = req.flash("error_msg");
-            res.locals.error = req.flash("error");
-            next()
-        })
+    //Middleware
+            app.use((req, res, next) => {
+                res.locals.success_msg = req.flash("success_msg");
+                res.locals.error_msg = req.flash("error_msg");
+                res.locals.error = req.flash("error");
+                next()
+            })
 
-Agora criamos a variavel, mas precisamos exibi-la na página. Então Lá no arquivo main.handlebars digitamos:
+Agora criamos a variável, mas precisamos exibi-la na página. Então lá no arquivo main.handlebars digitamos:
 
     <body>
         {{>_navbar}}

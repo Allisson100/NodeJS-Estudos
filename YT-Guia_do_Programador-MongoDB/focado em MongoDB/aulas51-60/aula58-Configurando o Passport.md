@@ -4,7 +4,7 @@ Passport é um middleware de autenticação específico para o express, com ele 
 
 Quando você entra em um site e tem a parte de se cadastrar com a conta google ou com o facebook, uma das meneiras é utlizar esse middleware Passport, mas no nosso caso vamos utilizar a maneira local do passport, pois ela utiliza o nosso próprio banco de dados para autenticar o usuário.
 
-Para instala-lo vamos na página do projeto pelo cmd e digitamos:
+Para instalá-lo vamos na página do projeto pelo cmd e digitamos:
 
     npm install --save passport
 
@@ -12,53 +12,53 @@ Além disso precisamos passar a estratégia e para isso digitamos no cmd:
 
     npm install --save passport-local
 
-Para começar vamos cria ruma pasta com o nome config e dentro dela vamos criar um arquivo chamado auth.js.
+Para começar vamos criar uma pasta com o nome config e dentro dela vamos criar um arquivo chamado auth.js.
 
 Nesse arquivo vamos estruturar todo o sistema de autenticação.
 
 Então no arquivo auth.js digitamos:
 
-const localStrategy = require("passport-local").Strategy;
-const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
+    const localStrategy = require("passport-local").Strategy;
+    const mongoose = require("mongoose");
+    const bcrypt = require("bcryptjs");
 
-//Model de Usuário
-require("../models/Usuario");
-const Usuario = mongoose.model("usuarios");
+    //Model de Usuário
+    require("../models/Usuario");
+    const Usuario = mongoose.model("usuarios");
 
 
-module.exports = function(passport){
+    module.exports = function(passport){
 
-    passport.use(new localStrategy({usernameField: 'email'}, (email, senha, done) => {
+        passport.use(new localStrategy({usernameField: 'email'}, (email, senha, done) => {
 
-        Usuario.findOne({email: email}).then((usuario) => {
-            if(!usuario){
-                return done(null, false, {message: "Está conta não existe!"});
-            }
-
-            bcrypt.compare(senha, usuario.senha, (erro, batem) => {
-
-                if(batem) {
-                    return done(null, usuario);
-                } else {
-                    return done(null, false, {message: "Senha incorreta"});
+            Usuario.findOne({email: email}).then((usuario) => {
+                if(!usuario){
+                    return done(null, false, {message: "Está conta não existe!"});
                 }
+
+                bcrypt.compare(senha, usuario.senha, (erro, batem) => {
+
+                    if(batem) {
+                        return done(null, usuario);
+                    } else {
+                        return done(null, false, {message: "Senha incorreta"});
+                    }
+                })
+            })
+        }))
+
+        passport.serializeUser((usuario, done) => {
+
+            done(null, usuario.id);
+
+        })
+
+        passport.deserializeUser((id, done) => {
+            Usuario.findById(id, (err, usuario) => {
+                done(err, usuario)
             })
         })
-    }))
-
-    passport.serializeUser((usuario, done) => {
-
-        done(null, usuario.id);
-
-    })
-
-    passport.deserializeUser((id, done) => {
-        Usuario.findById(id, (err, usuario) => {
-            done(err, usuario)
-        })
-    })
-}
+    }
 
 -------------------------------------------
     passport.serializeUser((usuario, done) => {

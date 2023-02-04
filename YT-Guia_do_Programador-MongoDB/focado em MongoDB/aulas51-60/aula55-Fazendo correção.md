@@ -1,6 +1,6 @@
 # Fazendo correção
 
-Esquecemos de criar um outro campo no model Usuario.js, que seria ocampo para verificar se o usuário e admin ou não.
+Esquecemos de criar um outro campo no model Usuario.js, que seria o campo para verificar se o usuário é admin ou não.
 
 Então para isso editamos o model de usuário:
 
@@ -31,6 +31,6 @@ Então para isso editamos o model de usuário:
 
     mongoose.model("usuarios", Usuario);
 
-Quando o campo eAdmin for igual a 0, significa que o usuário NÃo é ADMIN e quando o valor for igual a 1 significa que ele é ADMIN da página.
+Quando o campo eAdmin for igual a 0, significa que o usuário NÃO é ADMIN e quando o valor for igual a 1 significa que ele é ADMIN da página.
 
 

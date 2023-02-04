@@ -30,9 +30,9 @@ Agora dentro do arquivo index.handlebars que está na página categorias digitam
 
     {{/each}}
 
-Lembrando que temos que linkar nno href a palavra categorias que está na navbar com essa rota /categorias.
+Lembrando que temos que linkar no href a palavra categorias que está na navbar com essa rota /categorias.
 
-Agora vamos linkar esses nome da categoria para que quando o usuario clicar ele vai ir para uma página com os conteúdos a respieto daquela categoria.
+Agora vamos linkar esses nome da categoria para que quando o usuário clicar ele vai ir para uma página com os conteúdos a respeito daquela categoria.
 
 Para isso vamos colocar uma tag a:
 
@@ -45,7 +45,7 @@ Para isso vamos colocar uma tag a:
 
     {{/each}}
 
-E vamos direciona-lo para uma rota específica:
+E vamos direcioná-lo para uma rota específica:
 
    app.get("/categorias/:slug", (req, res) => {
         Categoria.findOne().lean().then((categoria) => {

@@ -39,11 +39,11 @@ Agora vamos criar uma nova rota:
         Postagem.findOne({slug: req.params.slug})
     })
 
-Basicamente essa rota vai pesquisar uma postagem pelo slug dela e esse slug vai ser passado pelo usuario pelo parametro da rota.
+Basicamente essa rota vai pesquisar uma postagem pelo slug dela e esse slug vai ser passado pelo usuário pelo parâmetro da rota.
 
-Agora precisamos fazer alquela rota rendenizar uma postagem, mas para isso vamos criar priimeiro uma pasta em views com o nome de postagem e criar um arquivo index.handlebars lá dentro.
+Agora precisamos fazer aquela rota rendenizar uma postagem, mas para isso vamos criar primeiro uma pasta em views com o nome de postagem e criar um arquivo index.handlebars lá dentro.
 
-Depois que criamos vamos adicionar na rota:
+Depois que criar vamos adicionar na rota:
 
     app.get("/postagem/:slug", (req, res) => {
         Postagem.findOne({slug: req.params.slug}).then((postagem) => {
@@ -59,7 +59,7 @@ Depois que criamos vamos adicionar na rota:
         })
     })
 
-Depois disso temos que adcionar essa rota no href do botão que está na arquivo index.handlebars dentro da pasta views:
+Depois disso temos que adicionar essa rota no href do botão que está na arquivo index.handlebars dentro da pasta views:
 
     <div class="bg-light p-5 rounded-lg m-3">
     <h1 class="display-4">Bem-vindo ao Blog do Node</h1>

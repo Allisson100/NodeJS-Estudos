@@ -1,6 +1,6 @@
 # Cadastrando usuários no banco de dados
 
-Vamos registrar um usuario dentro do banco de dados. Para isso vamos mexer no arquivo usuario.js la no else antes de registrar o usuario. Precisamos verificar se o usuario que está tentando se cadastrar, está utilizando ou não um email que já existe no banco de dados. E para isso digitamos:
+Vamos registrar um usuário dentro do banco de dados. Para isso vamos mexer no arquivo usuario.js lá no else antes de registrar o usuário. Precisamos verificar se o usuário que está tentando se cadastrar, está utilizando ou não um email que já existe no banco de dados. E para isso digitamos:
 
     router.post("/registro", (req, res) => {
 
@@ -46,17 +46,17 @@ Vamos registrar um usuario dentro do banco de dados. Para isso vamos mexer no ar
 
     })
 
-Temos que fazer uma alteração no programa de usuarios, pois nossa senha está como type: String e vamos supor que um hacker invada o sistema e roube as senhas, elas vão estar legiveis por conta do type: String. Então precisamos criptografar as senhas do usuario ou "hashear" a senha.
+Temos que fazer uma alteração no programa de usuários, pois nossa senha está como type: String e vamos supor que um hacker invada o sistema e roube as senhas, elas vão estar legiveis por conta do type: String. Então precisamos criptografar as senhas do usuário ou "hashear" a senha.
 
-Lebrando que um hash é quando você codifica uma mensagem. E hash é difenrete de criptografia, pois criptografia é reversível, já o hash não é reversível.
+Lembrando que um hash é quando você codifica uma mensagem. E hash é diferente de criptografia, pois criptografia é reversível, já o hash não é reversível.
 
 Para isso vamos usar uma biblioteca chamada bcryptjs.
 
-Para instala-lo vamos na pasta do projeto pelo cmd e digitamos:
+Para instalá-la vamos na pasta do projeto pelo cmd e digitamos:
 
     npm install --save bcryptjs
 
-Após instala-lo vamos importar no arquivo usuario.js
+Após instalá-la vamos importar no arquivo usuario.js
 
     const bcrypt = require("bcryptjs");
 

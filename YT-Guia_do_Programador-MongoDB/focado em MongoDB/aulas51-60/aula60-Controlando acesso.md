@@ -1,8 +1,8 @@
 # Controlando acesso
 
-Agora vamos fazer a parte onde os apenas os admin vão poder acessar aquela parte de categorias.
+Agora vamos fazer a parte onde apenas os admin vão poder acessar aquela parte de categorias.
 
-Vamos armazenar os dados do usuario logado em uma variavel global com o passport.
+Vamos armazenar os dados do usuário logado em uma variável global com o passport.
 
 Vamos no arquivo app.js e na parte do middleware vamos criar uma nova variável:
 
@@ -15,13 +15,13 @@ Vamos no arquivo app.js e na parte do middleware vamos criar uma nova variável:
             next()
         })
     
-A parte res.locals.user = req.user || null; signifca que a variavel user vai armazenar os dados do usuário autenticado. O req.user é uma coisa que o passport cria automaticamente que armazena dados daqulele usuario logado. E o null serve para caso não exista usuário logado o que vai ser passado para aquela variável vai ser o valor null.
+A parte res.locals.user = req.user || null; signifca que a variável user vai armazenar os dados do usuário autenticado. O req.user é uma coisa que o passport cria automaticamente que armazena dados daquele usuário logado. E o null serve para caso não exista usuário logado o que vai ser passado para aquela variável vai ser o valor null.
 
-Agora vamos criar uma pasta com o nome helpers. Helpers são pequenas funções que servem para ajudar em alguma coisa. Podemos criar helpers para qulauqer coisa.
+Agora vamos criar uma pasta com o nome helpers. Helpers são pequenas funções que servem para ajudar em alguma coisa. Podemos criar helpers para qualquer coisa.
 
-Vamos criar um helper para poribir que um usuário entre em alguma rota específica.
+Vamos criar um helper para proibir que um usuário entre em alguma rota específica.
 
-dentro da pasta helpers vamos criar um novo arquivo com o nome eAdmin.js. Basicamente a utilizade desse arquivo é saber se o usuário está autenticado e se ele é admin.
+Dentro da pasta helpers vamos criar um novo arquivo com o nome eAdmin.js. Basicamente a utilidade desse arquivo é saber se o usuário está autenticado e se ele é admin.
 
 Então no arquivo eAdmin.js digitamos:
 
@@ -43,7 +43,7 @@ Agora vamos no arquivo admin.js que está na pasta routes e vamos carregar o hel
 
 Essa const quer dizer que eu quero pegar somente a função eAdmin.
 
-Agora tod rota que eu quiser proteger eu vou colocar a variável eAdmin antes do (req, res). Alguns exemplos:
+Agora toda a rota que eu quiser proteger eu vou colocar a variável eAdmin antes do (req, res). Alguns exemplos:
 
     router.get('/posts', eAdmin, (req, res) => {
         res.send("Página de posts!")
